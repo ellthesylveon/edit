@@ -1,0 +1,12 @@
+#!/bin/python
+import sys
+import os
+
+def main(args) -> None:
+    if len(args) == 1:
+        print("To use edit, specify a filename in the current directory, or a valid path to a file.")
+    else:
+        os.system(f'xdg-open {args[1]}')
+
+if __name__ == '__main__':
+    main(sys.argv)
